@@ -1,4 +1,4 @@
-getMolecularFormula<-function(function(getSMI)
+getMolecularFormula<-function(getSMI)
 {
 url<- "https://pubchem.ncbi.nlm.nih.gov/rest/pug/compound/SMILES/"
 out<-tryCatch({jsonlite::fromJSON(paste0(url,getSMI, "/JSON"))} ,error = function(x) {return(NA)})
